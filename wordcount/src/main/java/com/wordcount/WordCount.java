@@ -36,6 +36,8 @@ public class WordCount {
 	    job.setMapperClass(Map.class);
 	    job.setCombinerClass(Reduce.class);
 	    job.setReducerClass(Reduce.class);
+	    job.setNumReduceTasks(7);
+	  
 
 	    job.waitForCompletion(true);
   }
